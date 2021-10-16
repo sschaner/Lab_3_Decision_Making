@@ -25,23 +25,18 @@ namespace Lab_3_Decision_Making
 
             do // Loop to continue
             {
-
                 do // Loop if users number is not between 1 and 100
                 {
                     Console.Write("\nEnter a number between 1 and 100: ");
                     userInput = Console.ReadLine();
                     userNumber = int.Parse(userInput);
-                    if (userNumber <=1 || userNumber >= 100)
+                    if (userNumber <= 1 || userNumber >= 100)
                     {
                         Console.WriteLine("Please enter a valid number.\n");
                     }
 
-                    
+                } while (userNumber <= 1 || userNumber >= 100);
 
-                } while (userNumber <=1 || userNumber >= 100);
-
-                
-                
                 // Check if the users number is odd or greater than 60
                 if ((userNumber % 2 == 1) || userNumber > 60)
                 {
@@ -80,7 +75,6 @@ namespace Lab_3_Decision_Making
                     Console.ResetColor();
                     finished = true;
                 }
-
 
             } while (finished == false);
 
